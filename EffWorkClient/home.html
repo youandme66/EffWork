@@ -1,0 +1,35 @@
+<!--hide-nav-bar="true"隐藏头部导航栏-->
+    <!--<ion-view view-title="主页">-->
+        <ion-view hide-nav-bar="true">
+        <ion-content ng-controller="myhomeCtrl">
+            <ion-slide-box does-continue="true" show-pager="true" on-slide-changed="go_changed(index)" active-slide="index"
+                pager-click="go(index)">    <!--auto-play="true" 设置图片自动播放-->
+                <ion-slide>
+                    <img src="img/1.png">
+                </ion-slide>
+                <ion-slide>
+                    <img src="img/2.png">
+                </ion-slide>
+                <ion-slide>
+                    <img src="img/3.png">
+                </ion-slide>
+                <ion-slide>
+                    <img src="img/04.png">
+                </ion-slide>
+            </ion-slide-box>
+            <!--button-bar按钮样式-->
+            <div>
+                <a ui-sref="name">
+                <button class="button button-small button-calm">
+                   注册
+                </button>
+                </a>
+                <a ui-sref="login">
+                <button class="button button-small button-outline button-calm">
+                   登录
+                </button>
+                </a>
+            </div>
+        </ion-content>
+    </ion-view>
+

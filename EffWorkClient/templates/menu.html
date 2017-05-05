@@ -1,0 +1,74 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <!--按钮灵敏性-->
+  <ion-side-menu-content ng-controller="actionsheetCtl">
+    <ion-nav-bar class="bar-dark">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <!--定义导航栏按钮-->
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left" ng-click="action()">
+        </button>
+      </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+        <!--定义导航栏按钮-->
+        <a class="button button-icon button-clear ion-plus-round" href="#/app/task">
+          <!--button 可没有 href-->
+
+        </a>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+    <!--加载模板-->
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <!--定义侧边栏-->
+    <!--<ion-header-bar class="bar-calm" hide-nav-bar="true">
+      <h1 class="title">Left</h1>
+    </ion-header-bar>-->
+
+    <ion-content>
+      <!--定义侧边栏内容-->
+      <div class="row h item-avatar">
+        <img class="col col-center" src="img/adam.jpg">
+        <a class="col col-bottom namecolor" menu-close href="#/app/person">peanut</a>
+        <div class="position">
+          <a class="icon ion-ios-search pos_left" style="font-size:25px; color:#FFFFFF;" menu-close href="#/app/search"></a>
+          <a class="icon ion-email" style="font-size:25px; color:#FFFFFF;" menu-close href="#/app/email"></a>
+          <a class="icon ion-gear-b pos_right" style="font-size:25px; color:#FFFFFF;" menu-close href="#/app/set"></a>
+          <!--<i class="icon ion-ios-search pos_left" style="font-size:25px;" ></i>
+          <i class="icon ion-email" style="font-size:25px;"></i>
+          <i class="icon ion-gear-b pos_right" style="font-size:25px;"></i>-->
+        </div>
+      </div>
+      <ion-list>
+        <ion-item class="item-icon-right item-icon-left" menu-close href="#/app/playlists">
+          <i class="icon ion-cube" style="font-size:20px;"></i> 任务箱
+          <i class="icon ion-ios-arrow-right" style="font-size:20px;"></i>
+        </ion-item>
+        <ion-list ng-controller="listCtrl">
+          <div>
+            <!--item-stable加在class里面让列表变暗-->
+            <ion-item class=" item-icon-right item-icon-left" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
+              <i class="icon ion-document-text" style="font-size:20px;"></i> 分类
+              <i class="icon" ng-class="isGroupShown(group) ? 'ion-ios-arrow-down' : 'ion-ios-arrow-right'" style="font-size:20px;"></i>
+            </ion-item>
+            <ion-item class="item-accordion" ng-repeat="item in group.items" ng-show="isGroupShown(group)" menu-close href="#/app/event1">
+             &nbsp; &nbsp;
+              <i class="icon ion-levels" style="font-size:20px;"></i>
+              {{item}}
+            </ion-item>
+          </div>
+        </ion-list>
+        <ion-item class="item-icon-right item-icon-left" menu-close href="#/app/date">
+          <i class="icon ion-calendar" style="font-size:20px;"></i> 日历
+          <i class="icon ion-ios-arrow-right" style="font-size:20px;"></i>
+        </ion-item>
+        <ion-item class="item-icon-right item-icon-left" menu-close href="#/app/fankui">
+          <i class="icon ion-ios-paper" style="font-size:20px;"></i> 反馈
+          <i class="icon ion-ios-arrow-right" style="font-size:20px;"></i>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

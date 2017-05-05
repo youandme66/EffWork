@@ -1,0 +1,20 @@
+<ion-view class="stable-bg calm" view-title="真实姓名">
+	<ion-content ng-controller="nameCtrl">
+		<div class="list ">
+			<!--list-inset输入框块状-->
+			<label class="item item-input">
+    <input type="text" placeholder="真实姓名">
+	<i class="icon ion-close-circled placeholder-icon">&nbsp&nbsp&nbsp&nbsp</i>
+  </label>
+		</div>
+		<div class="padding">
+			<!--padding的作用-->
+			<a ui-sref="area">
+				<button class="button button-block button-calm" ng-click="nameApp()">
+                            下一步
+                </button>
+			</a>
+		</div>
+		<p style="text-align:center;">注册即表示同意<a class="calm">Effwork服务条款</a></p>
+	</ion-content>
+</ion-view>

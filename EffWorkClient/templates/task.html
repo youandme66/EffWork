@@ -1,0 +1,40 @@
+<ion-view class="stable-bg" view-title="创建任务">
+  <ion-nav-buttons side="right">
+    <a class="button button-icon button-clear ion-checkmark" href="#/app/playlists">
+    </a>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="list" ng-controller="PopupCtrl">
+      <label class="item item-input">
+                   <i class="icon ion-compose placeholder-icon" style="font-size:25px;"></i>
+               <input type="text" placeholder="请输入任务名">
+               </label>
+      <div class="item item-divider">
+      </div>
+      <a class="item item-icon-left" ng-click="showConfirm()">
+        <i class="icon ion-android-funnel placeholder-icon" style="font-size:25px;"></i> 优先级
+      </a>
+
+      <a class="item item-icon-left" href="#">
+        <i class="icon ion-android-compass placeholder-icon" style="font-size:25px;"></i> 预估番茄数
+      </a>
+
+      <a class="item item-icon-left" ng-click="showPopup()">
+        <i class="icon ion-android-bookmark placeholder-icon" style="font-size:25px;"></i> 设置标签
+      </a>
+
+      <a class="item item-icon-left" href="#">
+        <i class="icon ion-android-time placeholder-icon" style="font-size:25px;"></i> 请选择日期
+      </a>
+      <div class="item item-divider">
+      </div>
+      <a class="item " ng-click="showAlert()">
+        <i class="icon ion-ios-pie-outline placeholder-icon" style="font-size:25px;"></i>提前时间段
+      </a>
+
+      <a class="item " href="#">
+        <i class="icon ion-ios-loop-strong placeholder-icon" style="font-size:25px;"></i>重复频率
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

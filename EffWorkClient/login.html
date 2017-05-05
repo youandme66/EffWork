@@ -1,0 +1,35 @@
+    <ion-pane>
+        <ion-view class="stable-bg calm" view-title="登录" hide-back-button="true">
+            <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear ion-ios-arrow-back" ui-sref="home">
+				</button>
+  </ion-nav-buttons>
+            <ion-content ng-controller="loginCtrl">
+                <div class="list">
+                    <label class="item item-input">
+                        <i class="icon ion-iphone placeholder-icon" style="font-size:25px;"></i>
+                     <input type="text" placeholder="手机号">
+                    </label>
+                    <label class="item item-input">
+                        <i class="icon ion-ios-locked placeholder-icon" style="font-size:25px;"></i>
+                     <input type="text" placeholder="密码">
+                    </label>
+                </div>
+                <div class="padding">
+                    <a href="#/app/playlists">
+                        <button class="button button-block button-calm" ng-click="loginApp()">
+                            登录
+                        </button>
+                    </a>
+                </div>
+                <!--<h5 ng-click="show()">无法登录？</h5>-->
+                <div class="link-area" ng-controller="actionsheetCtrl"><a id='reg'>选择区号</a> <span class="spliter">|</span> <a ng-click="show()">无法登录</a>
+                </div>
+                <div style="text-align: center">
+                    <h5 class="fontcolor">------其他登录方式------</h5>
+                    <img  src="img/chat.jpg" alt="chat" width="42" height="42">
+                </div>
+                <!--class="fontcolor"放在div里无效     -->
+            </ion-content>
+        </ion-view>
+    </ion-pane>

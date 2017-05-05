@@ -1,0 +1,21 @@
+<ion-view class="stable-bg calm" view-title="设置账号">
+  <ion-content ng-controller="phoneCtrl">
+    <div class="list">
+      <label class="item item-input">
+    <input type="text" placeholder="手机号">
+    <timerbutton show-timer="false" >获取验证码</timerbutton>
+  </label>
+      <label class="item item-input">
+    <input type="text" placeholder="验证码">
+  </label>
+    </div>
+
+    <div class="padding">
+      <a ui-sref="password">
+        <button class="button button-block button-calm" ng-click="phoneApp()">
+                            下一步
+        </button>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

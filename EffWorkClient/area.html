@@ -1,0 +1,51 @@
+<ion-view class="stable-bg calm" view-title="个人信息">
+	<ion-content>
+		<div class="list">
+			<label class="item item-input item-select">
+    <div class="input-label">
+      选择地区
+    </div>
+    <select>
+      <option selected>武汉</option>
+      <option>上海</option>
+      <option>北京</option>
+	  <option>其他</option>
+    </select>
+  </label>
+			<label class="item item-input item-select">
+    <div class="input-label">
+      选择行业
+    </div>
+    <select>
+      <option selected>学生</option>
+      <option>职员</option>
+	  <option>其他</option>
+    </select>
+  </label>
+			<div class="item item-divider"><b>请选择性别</b></div>
+			<ion-list>
+				<ion-radio ng-model="choice" ng-value="'A'">男</ion-radio>
+				<ion-radio ng-model="choice" ng-value="'B'">女</ion-radio>
+			</ion-list>
+		</div>
+		<!--<div class="item item-divider"><b>请选择性别</b></div>
+   <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">男</div>
+    <i class="radio-icon ion-checkmark assertive"></i>
+   </label>
+   <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">女</div>
+    <i class="radio-icon ion-checkmark assertive"></i>
+   </label>
+		</div>-->
+		<div class="padding">
+			<a ui-sref="phone">
+				<button class="button button-block button-calm">
+                            下一步
+        </button>
+			</a>
+		</div>
+	</ion-content>
+</ion-view>
